@@ -1,0 +1,320 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .top-section-bg {
+    background-image: url(../public/assets/images/HomePage/hero\ background.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    animation: simple-fade 4s ease-in-out infinite;
+  }
+
+  @keyframes simple-fade {
+    0% {
+      filter: brightness(1);
+    }
+    50% {
+      filter: brightness(1.2);
+    }
+    100% {
+      filter: brightness(1);
+    }
+  }
+
+  #top-sec::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(135, 206, 235, 0.2) 0%,
+      rgba(135, 206, 235, 0) 100%
+    );
+    pointer-events: none;
+  }
+
+  #home-doctocr {
+    background-image: url(../public/assets/images/HomePage/Hero.png);
+    background-position: center;
+    background-size: cover;
+  }
+
+  .pulse-glow {
+    animation: pulse-animation 1.5s infinite;
+    box-shadow: 0 0 10px theme("colors.pink");
+  }
+
+  .pulse-glow-red {
+    animation: pulse-animation-red 1.5s infinite;
+    box-shadow: 0 0 10px theme("colors.red");
+  }
+
+  .pulse-glow-green {
+    animation: pulse-animation-green 1.5s infinite;
+    box-shadow: 0 0 10px theme("colors.green");
+  }
+
+  .pulse-glow-yellow {
+    animation: pulse-animation-yellow 1.5s infinite;
+    box-shadow: 0 0 10px theme("colors.dark-yellow");
+  }
+
+  .pulse-glow-blue {
+    animation: pulse-animation-blue 1.5s infinite;
+    box-shadow: 0 0 10px theme("colors.blue-primary");
+  }
+
+  .pulse-glow-brown {
+    animation: pulse-animation-brown 1.5s infinite;
+    box-shadow: 0 0 10px theme("colors.brown");
+  }
+
+  @keyframes pulse-light {
+    0% {
+      background-position: -100% 0%;
+    }
+    50% {
+      background-position: 100% 0%;
+    }
+    100% {
+      background-position: -100% 0%;
+    }
+  }
+
+  .animate-pulse-light {
+    background: linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.3),
+      rgba(255, 255, 255, 0.1)
+    );
+    background-size: 200% 200%;
+    animation: pulse-light 3s ease-in-out infinite;
+  }
+
+  @keyframes pulse-animation {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 0 10px theme("colors.pink");
+    }
+    50% {
+      transform: scale(1.03);
+      box-shadow: 0 0 15px theme("colors.pink");
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: 0 0 10px theme("colors.pink");
+    }
+  }
+
+  @keyframes pulse-animation-red {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 0 10px theme("colors.red");
+    }
+    50% {
+      transform: scale(1.03);
+      box-shadow: 0 0 15px theme("colors.red");
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: 0 0 10px theme("colors.red");
+    }
+  }
+
+  @keyframes pulse-animation-green {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 0 10px theme("colors.green");
+    }
+    50% {
+      transform: scale(1.03);
+      box-shadow: 0 0 15px theme("colors.green");
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: 0 0 10px theme("colors.green");
+    }
+  }
+
+  @keyframes pulse-animation-yellow {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 0 10px theme("colors.dark-yellow");
+    }
+    50% {
+      transform: scale(1.03);
+      box-shadow: 0 0 15px theme("colors.dark-yellow");
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: 0 0 10px theme("colors.dark-yellow");
+    }
+  }
+
+  @keyframes pulse-animation-blue {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 0 10px theme("colors.blue-primary");
+    }
+    50% {
+      transform: scale(1.03);
+      box-shadow: 0 0 15px theme("colors.blue-primary");
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: 0 0 10px theme("colors.blue-primary");
+    }
+  }
+
+  @keyframes pulse-animation-brown {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 0 10px theme("colors.brown");
+    }
+    50% {
+      transform: scale(1.03);
+      box-shadow: 0 0 15px theme("colors.brown");
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: 0 0 10px theme("colors.brown");
+    }
+  }
+
+  .security-card-animate {
+    animation: float-heartbeat 3s ease-in-out infinite;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+  }
+
+  @keyframes float-heartbeat {
+    0% {
+      transform: translateY(0) scale(1);
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    }
+    25% {
+      transform: translateY(-15px) scale(1.02);
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
+    }
+    40% {
+      transform: translateY(-15px) scale(1);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+    }
+    50% {
+      transform: translateY(-15px) scale(1.02);
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
+    }
+    65% {
+      transform: translateY(-15px) scale(1);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+    }
+    100% {
+      transform: translateY(0) scale(1);
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    }
+  }
+
+  .service-card-animate {
+    animation: float-heartbeat-delayed 3s ease-in-out infinite;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    animation-delay: 1.5s;
+  }
+
+  @keyframes float-heartbeat-delayed {
+    0% {
+      transform: translateY(0) scale(1);
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    }
+    25% {
+      transform: translateY(-15px) scale(1.02);
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
+    }
+    40% {
+      transform: translateY(-15px) scale(1);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+    }
+    50% {
+      transform: translateY(-15px) scale(1.02);
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
+    }
+    65% {
+      transform: translateY(-15px) scale(1);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+    }
+    100% {
+      transform: translateY(0) scale(1);
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    }
+  }
+
+  .main_phamacies_bg {
+    background-image: url(../public/assets/images/pharmacy/main_background.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .map {
+    background-image: url(../public/assets/images/HomePage/Plan-de-travail.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .gradient {
+    background: linear-gradient(50deg, #154987, #1c795e, #32e800);
+  }
+
+  .carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    height: 200px;
+  }
+
+  .carousel-card {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .element {
+    box-shadow: 0 0 30px rgba(21, 72, 135, 0.397);
+  }
+
+  @keyframes opacityCycle {
+    0% {
+      opacity: 0.1;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0.1;
+    }
+  }
+
+  @keyframes rotateInfinite {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .halftone-animation {
+    animation: opacityCycle 3s infinite;
+  }
+
+  .rotate-infinite {
+    animation: rotateInfinite 10s linear infinite;
+  }
+}
