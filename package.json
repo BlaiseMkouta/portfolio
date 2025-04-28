@@ -2,6 +2,7 @@
   "name": "myPortfolio",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://BlaiseMkouta.github.io/portfolio",
   "dependencies": {
     "@fortawesome/free-brands-svg-icons": "^6.6.0",
     "@fortawesome/free-regular-svg-icons": "^6.6.0",
@@ -39,7 +40,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -61,6 +64,7 @@
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.6.3",
+    "gh-pages": "^6.3.0",
     "tailwindcss": "^3.4.15"
   },
   "packageManager": "yarn@3.6.4+sha512.e70835d4d6d62c07be76b3c1529cb640c7443f0fe434ef4b6478a5a399218cbaf1511b396b3c56eb03bc86424cff2320f6167ad2fde273aa0df6e60b7754029f"
